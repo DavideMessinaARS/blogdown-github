@@ -48,7 +48,7 @@ packages <- c("here", "blogdown", "reactablefmtr")
 # Install packages not yet installed
 installed_packages <- packages %in% rownames(utils::installed.packages())
 if (any(installed_packages == FALSE)) {
-  install.packages(packages[!installed_packages])
+  utils::install.packages(packages[!installed_packages])
 }
 
 #invisible(lapply(packages, library, character.only = TRUE))
